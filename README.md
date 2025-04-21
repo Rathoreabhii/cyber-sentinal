@@ -101,7 +101,58 @@ This tool is for **educational** and **research** purposes only. Misuse of this 
 ---
 
 --NOW COMING TO DETECT AND REMOVE IT-----
-we are going to use 
+we are going to use our antivurs to detect it;;
+
+🧰 Threat Detection & Antivirus Script (Python)
+This Python script acts as a lightweight antivirus and threat analyzer designed for ethical hacking environments and cybersecurity education. It scans a given file and system for suspicious characteristics and deletes known threats (like evil.exe) when identified.
+
+🔍 Key Features
+>🧠 Process Monitoring: Detects suspicious running processes (e.g. evil.exe)
+
+>📦 File Size Inspection: Flags abnormally large files
+
+>🧾 File Hashing: Computes SHA-256 hash and compares against known malicious hashes
+
+>🧬 Metadata Analysis: Extracts and displays image metadata (Exif data)
+
+>🔏 Digital Signature Check (Windows Only): Verifies file authenticity
+
+>🧪 VirusTotal Integration: Queries online database to check file reputation
+
+>🧹 Auto-Deletion: Deletes files with dangerous names or characteristics
+
+
+🧪 How It Works
+--The script performs layered analysis on a suspicious file:
+
+>Checks if the file name is "evil.exe" (a common attack name)
+
+>Scans running processes to look for known malware executables
+
+>Inspects file metadata to reveal potentially hidden data or suspicious camera info
+
+>Verifies digital signatures (only on Windows)
+
+>Submits SHA-256 hash to VirusTotal for real-time AV engine checks
+
+>Deletes file automatically if it's dangerous or listed in your local hash blacklist
+
+🔧 Requirements
+>bash
+>Copy
+>Edit
+>pip install psutil requests pyexiv2 pywin32
+
+
+🛡️ Usage
+Edit the last line of the script to point to the file you want to scan:
+
+>python
+>downloaded_file_path = 'path/to/suspect_file.exe'
+>Edit
+>downloaded_file_path = 'path/to/suspect_file.exe'
+Then run:
+python3 protector.py
 
 
 ## 👨‍💻 Author
